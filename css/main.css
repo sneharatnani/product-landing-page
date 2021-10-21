@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    padding: 0 10px;
+    height: 9vh;
+}
+
+#nav-bar {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 20px;
+}
+
+.links {
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container input {
+    display: none;
+}
+
+a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url(../img/icons8-team-7LNatQYMzm4-unsplash\ \(1\).jpg);
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 7vh);
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 800px) {
+    .links {
+        display: block;
+        margin-right: -10px;
+        text-align: center;
+        width: 100vw;
+        position: absolute;
+        background: white;
+        max-height: 0;
+        margin-top: 23vh;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+    .container {
+        justify-items: end;
+        display: grid;
+        position: relative;
+        align-items: center;
+    }
+    .container input {
+        height: 40px;
+        display: block;
+        position: absolute;
+        width: 50px;
+        z-index: 3;
+        opacity: 0;
+    }
+    .container span {
+        left: -10px;
+        display: block;
+        width: 40px;
+        position: relative;
+        height: 4px;
+        background: black;
+    }
+    .container span::before, .container span::after {
+        content: "";
+        height: 100%;
+        background: black;
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        transition: all 0.3s ease-out;
+    }
+    .container span::after {
+        top: 10px;
+    }
+    .container input:checked~.links {
+        display: block;
+        position: absolute;
+        max-height: 1000px;
+    }
+
+    .container input:checked ~ span {
+        background: transparent;
+    }
+
+    .container input:checked ~ span::before {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .container input:checked ~ span::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+}
