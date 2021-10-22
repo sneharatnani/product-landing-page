@@ -1,21 +1,30 @@
-body {
+* {
     margin: 0;
     padding: 0;
 }
 
+p {
+    line-height: 1.5;
+}
+
+/* header styles */
+
 #header {
-    padding: 0 10px;
+    width: 100%;
+    background: white;
     height: 9vh;
+    position: fixed;
 }
 
 #nav-bar {
+    padding: 0 20px;
     height: 9vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-div {
+.logo-container {
     display: flex;
     justify-content: flex-start;
 }
@@ -25,43 +34,163 @@ div {
 }
 
 .links {
-    gap: 15px;
+    gap: 20px;
     list-style: none;
     display: flex;
     justify-content: flex-end;
 }
 
-.container input {
-    display: none;
-}
-
-a {
+.links a {
     color: black;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* checkbox */
+
+.container input {
+    display: none;
+}
+
+/* hero section */
+
 .hero {
     background-image: url(../img/icons8-team-7LNatQYMzm4-unsplash\ \(1\).jpg);
     background-size: cover;
     background-position: center center;
-    height: calc(100vh - 7vh);
+    height: 100vh;
     background-attachment: fixed;
 }
 
+.hero-content {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background: #08080836;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-transform: capitalize;
+}
+
+.hero-content button {
+    border: 1px solid white;
+    background: transparent;
+    padding: 6px;
+}
+
+.hero-content button:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-content a {
+    font-size: initial;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* features */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 20px;
+    background: black;
+    color: white;
+    padding: 50px 20px;
+}
+
+.features h2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    align-items: center;
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+    gap: 10px;
+}
+
+.features h2::before, .features h2::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to left, white, transparent);
+    display: block;
+}
+
+.features h2::after {
+    background: linear-gradient(to right, white, transparent);
+}
+
+.features img {
+    width: 4em;
+}
+
+.feature {
+    padding: 20px;
+    border: 1px solid silver;
+    text-align: center;
+}
+
+.feature figcaption {
+    color: silver;
+    text-transform: capitalize;
+}
+
+/* video */
+
+.video {
+    padding: 20px 0;
+    background: #c3e6e0;
+    text-align: center;
+}
+
+.video iframe {
+    width: 40vw;
+    border: none;
+    height: 50vh
+}
+
+.video h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+    }
+}
+
 @media screen and (max-width: 800px) {
+    /* nav menu */
+    #nav-bar {
+        padding-right: 0;
+    }
+    .links li {
+        padding-top: 15px;
+    }
+    .links li:last-child {
+        padding-bottom: 15px;
+    }
     .links {
         display: block;
-        margin-right: -10px;
         text-align: center;
         width: 100vw;
         position: absolute;
         background: white;
         max-height: 0;
-        margin-top: 23vh;
+        margin-top: 232px;
         overflow: hidden;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
     .container {
         justify-items: end;
@@ -102,18 +231,20 @@ a {
         position: absolute;
         max-height: 1000px;
     }
-
-    .container input:checked ~ span {
+    .container input:checked~span {
         background: transparent;
     }
-
-    .container input:checked ~ span::before {
+    .container input:checked~span::before {
         transform: rotate(-45deg);
         bottom: 0;
     }
-
-    .container input:checked ~ span::after {
+    .container input:checked~span::after {
         transform: rotate(45deg);
         top: 0;
+    }
+    /* video */
+    .video iframe {
+        width: 100vw;
+        height: 35vh;
     }
 }
