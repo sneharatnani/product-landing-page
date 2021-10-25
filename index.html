@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/favicon-32x32.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap" rel="stylesheet">
     <title>Product Landing Page</title>
 </head>
 
@@ -22,24 +23,24 @@
                 <span></span>
 
                 <ul class="links">
-                    <li class="nav-link"><a href="">home</a></li>
-                    <li class="nav-link"><a href="">features</a></li>
-                    <li class="nav-link"><a href="">products</a></li>
-                    <li class="nav-link"><a href="">video</a></li>
-                    <li class="nav-link"><a href="">contact</a></li>
+                    <li class="nav-link"><a href="#hero">home</a></li>
+                    <li class="nav-link"><a href="#features">features</a></li>
+                    <li class="nav-link"><a href="#video">video</a></li>
+                    <li class="nav-link"><a href="#products">products</a></li>
+                    <li class="nav-link"><a href="#contact">contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
                          <!-- hero section -->
-    <div class="hero">
+    <div class="hero" id="hero">
         <div class="hero-content">
             <h1>music only, nothing else!</h1>
-            <button><a href="">know more</a></button>
+            <button><a href="#features">know more</a></button>
         </div>
     </div>
                         <!-- features section -->
-    <section class="features">
+    <section class="features" id="features">
         <h2>Features</h2>
         <div class="feature">
             <figure><img src="img/noise cancellation.svg" alt="mute icon"/>
@@ -78,10 +79,57 @@
         </div>
     </section>
 
-    <section class="video">
-        <h2>our brand video</h2>
+                     <!-- video -->
+    <section class="video" id="video">
+        <h3>get some more information with our brand video</h3>
         <iframe src="https://youtube.com/embed/vuoxprrEwbg" id="video"></iframe>
     </section>
+
+                     <!-- products -->
+    <section class="products" id="products">
+        <h2>products</h2>
+        <p class="sub-heading">these are our bestsellers</p>
+        <div class="product">
+            <h3>WH-1000XM4 Noise Cancelling Headphones</h3>
+            <span>&#8377; 29,990</span>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <button><a href="https://www.sony.co.in/electronics/headband-headphones/wh-1000xm4" target="_blank">buy now</a></button>
+        </div>
+
+        <div class="product">
+            <h3>WH-XB700 Bluetooth Wireless Headphones</h3>
+            <span>&#8377; 9,990</span>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <button><a href="https://www.sony.co.in/electronics/headband-headphones/wh-xb700" target="_blank">buy now</a></button>
+        </div>
+
+        <div class="product">
+            <h3>WH-CH5010 Wireless Headphones</h3>
+            <span>&#8377; 4,990</span>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <button><a href="https://www.sony.co.in/electronics/headband-headphones/wh-ch510" target="_blank">buy now</a></button>
+        </div>
+    </section>
+
+                    <!-- contacts -->
+    <footer id="contact">
+        <h2>contact us</h2>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <input type="email" id="email" placeholder="example@email.com" required>
+            <input type="submit" id="submit">
+        </form>
+        <div class="social-link">
+           <a href="#"><img src="img/twitter.svg" alt="twitter logo"></a>
+            <a href="https://github.com/sneharatnani" target="_blank"><img src="img/github.svg" alt="github logo"></a>
+            <a href="https://www.linkedin.com/in/sneha-ratnani-083319224/" target="_blank"><img src="img/linkedin.svg" alt="linkedin logo"></a>
+        </div>
+    </footer>
 </body>
 
 </html>
