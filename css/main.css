@@ -90,15 +90,11 @@ h2::before, h2::after {
     background-size: cover;
     background-position: center center;
     height: 100vh;
-    background-attachment: fixed;
 }
 
 .hero-content {
-    width: 100%;
-    margin-top: 9vh;
-    height: 91vh;
-    position: absolute;
     text-align: center;
+    height: 100%;
     font-size: 2rem;
     color: white;
     background: #08080836;
@@ -259,6 +255,7 @@ h2::before, h2::after {
 /* contacts */
 
 footer {
+    color: white;
     text-align: center;
     gap: 30px;
     display: grid;
@@ -269,7 +266,6 @@ footer {
 
 footer h2 {
     white-space: nowrap;
-    color: white;
 }
 
 input:focus {
@@ -318,6 +314,7 @@ input[type=submit] {
 }
 
 /* ipad pro portrait */
+
 @media screen and (width: 1024px) and (orientation: portrait) {
     .video iframe {
         width: 80vw;
